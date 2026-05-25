@@ -9,8 +9,8 @@ public class PrimeNumber {
 
         boolean isPrime = true;
 
-        if (n <= 1) {
-            isPrime = false;
+        if (n <= 1) {s
+        
         } else {
 
             for (int i = 2; i <= Math.sqrt(n); i++) {
