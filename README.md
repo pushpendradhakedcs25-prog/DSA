@@ -5,7 +5,7 @@ class Solution {
     public char processStr(String s, long k) {
         long len = 0;
 
-        // Compute final length
+       
         for (char c : s.toCharArray()) {
             if (c == '*') {
                 len = Math.max(0, len - 1);
@@ -18,7 +18,7 @@ class Solution {
 
         if (k >= len) return '.';
 
-        // Reverse simulation
+     
         for (int i = s.length() - 1; i >= 0; i--) {
             char c = s.charAt(i);
 
