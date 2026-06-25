@@ -56,30 +56,4 @@ class Solution {
                 for (int j = 0; j < n; j++)
                     r[j] = (r[j] + a[i] * b[i][j]) % M;
         return r;
-    }
-
-    long[][] mul(long[][] a, long[][] b) {
-        int n = a.length;
-        long[][] r = new long[n][n];
-        for (int i = 0; i < n; i++)
-            for (int k = 0; k < n; k++)
-                if (a[i][k] != 0)
-                    for (int j = 0; j < n; j++)
-                        r[i][j] = (r[i][j] + a[i][k] * b[k][j]) % M;
-        return r;
-    }
-
-    long[][] pow(long[][] a, long e) {
-        int n = a.length;
-        long[][] r = new long[n][n];
-        for (int i = 0; i < n; i++) r[i][i] = 1;
-
-        while (e > 0) {
-            if ((e & 1) == 1) r = mul(r, a);
-            a = mul(a, a);
-            e >>= 1;
-        }
-        return r;
-    }
-}
-
+    } ][]  
