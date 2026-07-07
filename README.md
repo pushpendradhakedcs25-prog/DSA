@@ -1,4 +1,22 @@
 class Solution {
+    public long sumAndMultiply(int n) {
+        int x = 0;
+        int sum = 0;
+        int p = 1;
+
+        while (n > 0) {
+            int d = n % 10;
+            if (d != 0) {
+                x += d * p;
+                p *= 10;
+                sum += d;
+            }
+            n /= 10;
+        }
+
+        return 1L * x * sum;
+    }
+} Solution {
   public int minScore(int n, int[][] roads) {
     int ans = Integer.MAX_VALUE;
     List<Pair<Integer, Integer>>[] graph = new List[n]; // graph[u] := [(v, distance)]
