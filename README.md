@@ -1,5 +1,67 @@
 class Solution {
-    public long sumAndMultiply(int n) {
+class Solution {
+    static final int MOD = 1000000007;
+
+    public int[] concatNonZeroAndMultiply(String s, int[][] queries) {
+        int n = s.length();
+
+        int[] next = new int[n + 1];
+        next[n] = -1;
+        for (int i = n - 1; i >= 0; i--)
+            next[i] = s.charAt(i) != '0' ? i : next[i + 1];
+
+        int[] id = new int[n];
+        int m = 0;
+        for (int i = 0; i < n; i++)
+            if (s.charAt(i) != '0') id[i] = m++;
+
+        int[] pos = new int[m], sum = new int[m + 1];
+        long[] num = new long[m + 1], p10 = new long[m + 1];
+        p10[0] = 1;
+
+        for (int i = 0, k = 0; i < n; i++) {
+            if (s.charAt(i) != '0') {
+                pos[k] = i;
+                int d = s.charAt(i) - '0';
+                num[k + 1] = (num[k] * 10 + d) % MOD;
+                sum[k + 1] = sum[k] + d;
+                k++;
+            }
+        }
+
+        for (int i = 1; i <= m; i++)
+            p10[i] = p10[i - 1] * 10 % MOD;
+
+        int[] ans = new int[queries.length];
+
+        for (int i = 0; i < queries.length; i++) {
+            int l = queries[i][0], r = queries[i][1];
+            int f = l < n ? next[l] : -1;
+
+            if (f == -1 || f > r) {
+                ans[i] = 0;
+                continue;
+            }
+
+            int L = id[f], lo = L, hi = m - 1, R = L;
+            while (lo <= hi) {
+                int mid = (lo + hi) / 2;
+                if (pos[mid] <= r) {
+                    R = mid;
+                    lo = mid + 1;
+                } else {
+                    hi = mid - 1;
+                }
+            }
+
+            int len = R - L + 1;
+            long val = (num[R + 1] - num[L] * p10[len] % MOD + MOD) % MOD;
+            ans[i] = (int) (val * (sum[R + 1] - sum[L]) % MOD);
+        }
+
+        return ans;
+    }
+}    public long sumAndMultiply(int n) {
         int x = 0;
         int sum = 0;
         int p = 1;
