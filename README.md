@@ -1,8 +1,4 @@
-class 
-
-class Solution {
-  public List<Integer> sequentialDigits(int low, int high) {
-    List<Integer> ans = new ArrayList<>();
+List<Integer> ans = new ArrayList<>();
     Queue<Integer> q = new ArrayDeque<>(List.of(1, 2, 3, 4, 5, 6, 7, 8, 9));
 
     while (!q.isEmpty()) {
@@ -42,7 +38,10 @@ class Solution {
     Map<Integer, Integer> rank = new HashMap<>();
 
     Arrays.sort(sortedArr);
-
+    
+class Solution {
+  public List<Integer> sequentialDigits(int low, int high) {
+    
     for (final int a : sortedArr)
       rank.putIfAbsent(a, rank.size() + 1);
 
