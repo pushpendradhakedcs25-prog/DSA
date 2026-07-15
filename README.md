@@ -1,4 +1,8 @@
-List<Integer> ans = new ArrayList<>();
+class Solution {
+    public int gcdOfOddEvenSums(int n) {
+        return n;
+    }
+} ans = new ArrayList<>();
 class Solution {
     
     private int n;
