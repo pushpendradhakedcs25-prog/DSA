@@ -1,4 +1,4 @@
-class Solution {
+ Solution {
     public int uniqueXorTriplets(int[] nums) {
         boolean[] pair = new boolean[2048];
         boolean[] ans = new boolean[2048];
