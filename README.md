@@ -1,4 +1,11 @@
 class Solution {
+  public int maxProduct(int n) {
+    char[] s = String.valueOf(n).toCharArray();
+    Arrays.sort(s);
+    final int sz = s.length;
+    return (s[sz - 1] - '0') * (s[sz - 2] - '0');
+  }
+}lass Solution {
     public int uniqueXorTriplets(int[] nums) {
         boolean[] pair = new boolean[2048];
         boolean[] ans = new boolean[2048];
