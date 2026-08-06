@@ -20,7 +20,8 @@ class Solution {
 
         return dp[0][n - 1] >= 0;
     }
-}lass Solution {
+}
+class Solution {
   // Same as 3014. Minimum Number of Pushes to Type Word I
   public int minimumPushes(String word) {
     int ans = 0;
