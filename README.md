@@ -37,7 +37,7 @@ class Solution {
 
     return ans;
   }
-} Solution {
+} class Solution {
 
     static final long limit = 1_000_001L;
 
