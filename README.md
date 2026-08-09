@@ -102,7 +102,7 @@ class Solution {
 
         long res = 1;
 
-        int remaining = total;
+         int remaining = total;
 
         for (int i = 0; i < 26; i++) {
 
