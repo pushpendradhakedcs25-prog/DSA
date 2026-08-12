@@ -121,7 +121,7 @@ class Solution {
 
         return Math.min(res, limit);
     }
-} Solution {
+}class Solution {
   public String smallestPalindrome(String s) {
     final int n = s.length();
     final String sortedHalf = getSortedHalf(s);
