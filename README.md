@@ -41,7 +41,7 @@ class Solution {
 
     static final long limit = 1_000_001L;
 
-    public String smallestPalindrome(String s, int k) {
+    public String smallestPalindrome(String s, int k) { 
 
         int[] freq = new int[26];
 
