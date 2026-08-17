@@ -1,4 +1,4 @@
-  class Solution {
+   class Solution {
     public boolean predictTheWinner(int[] nums) {
         int n = nums.length;
         int[][] dp = new int[n][n];
