@@ -4,7 +4,7 @@
         int[][] dp = new int[n][n];
 
         for (int i = 0; i < n; i++) {
-            dp[i][i] = nums[i];
+            dp[i][i] = nums[i]; 
         }
 
         for (int len = 2; len <= n; len++) {
