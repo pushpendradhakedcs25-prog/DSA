@@ -1,4 +1,4 @@
-  class Solution {
+  class Solution { 
     public int[] resultArray(int[] nums) {
        List<Integer> arr1  = new ArrayList<>();
        List<Integer> arr2 = new ArrayList<>();
