@@ -1,4 +1,4 @@
-import java.util.*;
+ import java.util.*;
 
 class Solution {
     public int minMoves(String[] classroom, int energy) {
