@@ -5,7 +5,7 @@ class Solution {
         for(int i=0; i<k; i++){
             sum+=cardPoints[i];
         }
-        int max=sum;
+        int max=sum; 
         int left =k-1;
         for(int j=n-1; j>=n-k; j--){
             sum+=cardPoints[j];
