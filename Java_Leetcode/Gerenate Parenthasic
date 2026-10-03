@@ -1,0 +1,16 @@
+class Solution {
+    public void generate(int max , int open , int closed , String s , List<String> list ){
+        if(s.length() ==(2*max)){
+            list.add(s);
+            return ;
+        }
+        if(open<max)  generate(max, open+1, closed, s+"(", list);
+        if(closed<open) generate(max, open, closed+1, s+")", list);
+    }
+    public List<String> generateParenthesis(int n) {
+    List<String> list = new ArrayList<>();
+    generate(n,0,0,"",list);
+       return list;
+       }
+    
+}
