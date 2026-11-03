@@ -1,4 +1,4 @@
-            class Solution { 
+               class Solution { 
     public int[] resultArray(int[] nums) {
        List<Integer> arr1  = new  ArrayList<>();
         List<Integer> arr2 = new ArrayList<>();
@@ -33,7 +33,7 @@
                 int pickRight = nums[j] - dp[i][j - 1];
 
                 dp[i][j] = Math.max(pickLeft, pickRight);
-            }
+            } 
         }
 
         return dp[0][n - 1] >= 0;
